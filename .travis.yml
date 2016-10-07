@@ -1,0 +1,18 @@
+language: csharp
+
+os:
+  - linux
+  - osx
+
+mono:
+  - latest
+install:
+  - #nuget restore $TRAVIS_SOLUTION
+script:
+  - if test "$TRAVIS_OS_NAME" == "linux"; then
+       sudo apt-get install -y sysbench;
+       cat /proc/cpuinfo;
+       bash travis-plugins/show-perfomance.sh;
+    fi
+
+  
