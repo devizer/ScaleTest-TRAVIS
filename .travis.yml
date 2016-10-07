@@ -1,8 +1,6 @@
 language: csharp
-
 os:
   - linux
-
 mono:
   - latest
 install:
