@@ -3,6 +3,7 @@ os:
   - linux
 mono:
   - latest
+
 install:
   - #nuget restore $TRAVIS_SOLUTION
 script:
